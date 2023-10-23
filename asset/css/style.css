@@ -28,3 +28,7 @@ body{
     font-size: 1.3rem !important;
     height: 5rem !important;
 }
+.profilepics {
+    width: 200px;
+    height: auto;
+}
