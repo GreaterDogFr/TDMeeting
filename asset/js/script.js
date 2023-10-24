@@ -47,8 +47,8 @@ function afficherPersonnes() {
     for (let iteration = 0; iteration < 24; iteration++) {
         const newProfile = document.createElement("a")
         newProfile.setAttribute("id", arrayPersonnes[iteration].id)
-        newProfile.setAttribute("class", "profileCards rounded")
-        newProfile.setAttribute("href", "profil.html?id=" + arrayPersonnes[iteration].id)
+        newProfile.setAttribute("class", "profileCards d-flex flex-column align-items-center rounded")
+        newProfile.setAttribute("href", "profil.html?id=" + iteration)
 
         //? Afficher nom
         const divNom = document.createElement("div")
@@ -60,8 +60,7 @@ function afficherPersonnes() {
         const photoCartes = document.createElement("img")
         photoCartes.setAttribute("src", arrayPersonnes[iteration].photo)
         photoCartes.setAttribute("class", "profilepics")
-        //? Afficher un bouton
-        //?
+        //? On affiche tout
         searchContainer.appendChild(newProfile)
         newProfile.appendChild(photoCartes)
         newProfile.appendChild(divNom)
@@ -69,3 +68,5 @@ function afficherPersonnes() {
     }
 }
 afficherPersonnes()
+
+// function filtrer(){}
