@@ -52,7 +52,7 @@ function afficherPersonnes() {
 
         //? Afficher nom
         const divNom = document.createElement("div")
-        divNom.setAttribute("class","parentNomCartes")
+        divNom.setAttribute("class","parentNomCartes position-absolute")
         const nomCartes = document.createElement("p")
         nomCartes.setAttribute("class", "nomCartes")
         nomCartes.innerHTML = arrayPersonnes[iteration].pseudo
