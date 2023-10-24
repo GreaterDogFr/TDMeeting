@@ -162,8 +162,7 @@ body {
 .wrapper {
     width: 95%;
     margin: 0 auto;
-    border: Solid 3px black;
-    
+    /* border: Solid 3px black; */
 }
 
 .searchContainer {
