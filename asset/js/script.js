@@ -47,14 +47,14 @@ function afficherPersonnes() {
     for (let iteration = 0; iteration < 24; iteration++) {
         const newProfile = document.createElement("a")
         newProfile.setAttribute("id", arrayPersonnes[iteration].id)
-        newProfile.setAttribute("class", "profileCards")
-        newProfile.setAttribute("href", "profil.html")
+        newProfile.setAttribute("class", "profileCards rounded")
+        newProfile.setAttribute("href", "profil.html?id=" + arrayPersonnes[iteration].id)
 
         //? Afficher nom
         const divNom = document.createElement("div")
-        divNom.setAttribute("class","parentNomCartes position-absolute")
+        divNom.setAttribute("class","parentNomCartes w-100 position-relative")
         const nomCartes = document.createElement("p")
-        nomCartes.setAttribute("class", "nomCartes")
+        nomCartes.setAttribute("class", "nomCartes w-100 position-absolute start-0")
         nomCartes.innerHTML = arrayPersonnes[iteration].pseudo
         //? Afficher Photo
         const photoCartes = document.createElement("img")
