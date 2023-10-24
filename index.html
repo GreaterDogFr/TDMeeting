@@ -13,7 +13,7 @@
 
     <nav id="nav" class="navbar">
         <div class="container-fluid">
-            <a class="sweet navbar-brand ms-4">Sweet Love, la romance gout sucré</a>
+            <a class="sweet navbar-brand ms-4">SWEET LOVE, la romance gout sucré</a>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Rechercher un profil" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Rechercher un profil</button>
@@ -39,7 +39,7 @@
 
                 <div class="input-group mb-3  text-center">
                     <div class="mx-auto">
-                        <input class="form-check-input mt-1 ms-3 " type="checkbox" value="">
+                        <input id="checkbox1" class="form-check-input mt-1 ms-3 " type="checkbox" value="">
                         <label class="">J'accepte les conditions CGU </label>
                     </div>
                 </div>
@@ -47,12 +47,12 @@
 
                 <div class="input-group mb-3  text-center">
                     <div class="mx-auto">
-                        <input class="form-check-input mt-1 ms-2 " type="checkbox" value="">
+                        <input id="checkbox2" class="form-check-input mt-1 ms-2 " type="checkbox" value="">
                         <label class="">Je certifie avoir plus de 18 ans </label>
                     </div>
                 </div>
                 <div class="text-center">
-                    <button type="button" class="btn btn-primary">Acceder au site </button>
+                    <button id="button" type="button" class="btn btn-primary">Acceder au site </button>
                 </div>
             </div>
         </div>
@@ -60,7 +60,25 @@
     <footer>
         <div class=" taille text-center">Afpa 2023</div>
     </footer>
-    <script src="asset/js/style.js"></script>
+    <!-- <script src="asset/js/style.js"> -->
+        <script>
+
+    let button = document.querySelector('#button');
+    
+
+    button.addEventListener('click', function(){
+    
+        if (document.querySelector('#checkbox1').checked && document.querySelector('#checkbox2').checked){
+            window.location.href = "search.html"
+        }else {
+            alert("veuillez accepter les  conditions avant de continuer")
+        }
+
+
+    })
+
+        
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
