@@ -12,7 +12,7 @@
 
     <nav id="nav" class="navbar">
         <div class="container-fluid">
-            <a class="sweet navbar-brand ms-4">SWEET LOVE, La romance gout sucré</a>
+            <a class="sweet navbar-brand ms-4">SWEET LOVE , La romance gout sucré</a>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Rechercher un profil" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Rechercher un profil</button>
@@ -22,7 +22,7 @@
 </header>
 
 <body>
-
+    <button type="button" class="retour btn btn-primary text-center mt-3 ms-2">Retour à la page Search</button>
 
     <div id="container" class="container justify-content-center mt-5 text-center ">
 
@@ -118,8 +118,13 @@
          
     </div>
 `
+let btnRetour = document.querySelector('.retour')
+
+btnRetour.addEventListener('click', function(){
+    window.location.href = "search.html"
+})
     </script>
-   <button type="button" class="retour btn btn-primary text-center">Retour à la page Search</button>
+
     <footer>
         <div class=" taille text-center justify-content-center">Afpa 2023</div>
     </footer>
