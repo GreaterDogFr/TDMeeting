@@ -1,4 +1,7 @@
+//Todo :cookie de l'entrée dans le site
+
 let searchContainer = document.getElementById("searchContainer")
+let filter = document.getElementById("filters")
 class personnage {
 
     constructor(id, pseudo, photo, age, sexe, recherche, departement, description) {
@@ -46,30 +49,32 @@ let arrayHommes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe 
 let arrayFemmes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "femme")
 
 
-function afficherPersonnes() {
+function afficherPersonnes(gender) {
     //? On veut afficher tout le monde dans cette fonction
-    for (let iteration = 0; iteration < 24; iteration++) {
+    for (let iteration = 0; iteration < gender.length; iteration++) {
         const newProfile = document.createElement("a")
-        newProfile.setAttribute("id", arrayPersonnes[iteration].id)
-        newProfile.setAttribute("class", "profileCards d-flex flex-column align-items-center rounded")
-        newProfile.setAttribute("href", "profil.html?index=" + iteration)
+        newProfile.setAttribute("id", gender[iteration].id)
+        newProfile.setAttribute("class", "profileCards d-flex flex-column align-items-center rounded ")
+        newProfile.setAttribute("href", "profil.html?index=" + gender[iteration].id)
 
         //? Afficher nom
         const divNom = document.createElement("div")
-        divNom.setAttribute("class","parentNomCartes w-100 position-relative")
+        divNom.setAttribute("class", "parentNomCartes w-100 position-relative")
         const nomCartes = document.createElement("p")
         nomCartes.setAttribute("class", "nomCartes w-100 position-absolute start-0")
-        nomCartes.innerHTML = arrayPersonnes[iteration].pseudo
+        nomCartes.innerHTML = gender[iteration].pseudo
         //? Afficher Photo
         const photoCartes = document.createElement("img")
-        photoCartes.setAttribute("src", arrayPersonnes[iteration].photo)
+        photoCartes.setAttribute("src", gender[iteration].photo)
         photoCartes.setAttribute("class", "profilepics")
         //? On affiche tout
         searchContainer.appendChild(newProfile)
         newProfile.appendChild(photoCartes)
         newProfile.appendChild(divNom)
         divNom.appendChild(nomCartes)
+
     }
 }
-afficherPersonnes()
+afficherPersonnes(arrayFemmes)
 
+console.log(arrayHommes)
