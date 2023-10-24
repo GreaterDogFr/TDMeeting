@@ -181,16 +181,10 @@ body {
   overflow: hidden;
 }
 
-.parentNomCartes{
-    position: absolute;
-
-}
 .nomCartes {
-    /* background-color: white; */
-  position: absolute;
-  bottom: 50px;
-  left: -145px;
-  width: 300px;
-  color: white;
+  /* background-color: white; */
+  text-decoration: none;
+  color: #dd9b9f;
   font-size: 1.7rem;
+  background-color: rgba(2, 4, 23, 0.6);
 }
