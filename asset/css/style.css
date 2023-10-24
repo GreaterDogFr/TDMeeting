@@ -159,6 +159,13 @@ body {
 }
 /* search */
 
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    border: Solid 3px black;
+    
+}
+
 .searchContainer {
   display: flex;
   flex-flow: row wrap;
@@ -166,13 +173,9 @@ body {
   justify-content: center;
 }
 .profileCards {
-    border: Solid 3px black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
+  width: 250px;
+  height: 350px;
+  overflow: hidden;
 }
 
 .profilepics {
@@ -185,7 +188,9 @@ body {
   /* background-color: white; */
   text-decoration: none;
   color: #dd9b9f;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   bottom: -19px;
   background-color: rgba(2, 4, 23, 0.6);
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
