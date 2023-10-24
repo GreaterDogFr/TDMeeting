@@ -45,9 +45,10 @@ let arrayPersonnes = [personne1, personne2, personne3, personne4, personne5, per
 function afficherPersonnes() {
     //? On veut afficher tout le monde dans cette fonction
     for (let iteration = 0; iteration < 24; iteration++) {
-        const newProfile = document.createElement("div")
+        const newProfile = document.createElement("a")
         newProfile.setAttribute("id", arrayPersonnes[iteration].id)
         newProfile.setAttribute("class", "profileCards")
+        newProfile.setAttribute("href", "profil.html")
 
         //? Afficher nom
         const divNom = document.createElement("div")
