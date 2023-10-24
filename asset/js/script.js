@@ -40,13 +40,13 @@ let personne20 = new personnage('19', 'Geraud', 'asset/img/liliGeraud.jpg', '30'
 let personne21 = new personnage('20', 'Louna', 'asset/img/LounaDaCosta.jpg', '25', 'femme', 'homme', '75', ' en temps voulut')
 let personne22 = new personnage('21', 'Yoyo', 'asset/img/yohannLolo.jpg', '32', 'homme', 'femme', '76', ' en temps voulut')
 let personne23 = new personnage('22', 'Sam', 'asset/img/samiraPerrin.jpg', '24', 'femme', 'homme', '75', ' en temps voulut')
-let personne24 = new personnage('23', 'Mimi', 'asset/img/marliesRiedl.jpg', '26', 'femme', 'homme', '73', ' en temps voulut')
+let personne24 = new personnage('24', 'Mimi', 'asset/img/marliesRiedl.jpg', '26', 'femme', 'homme', '73', ' en temps voulut')
 
 let arrayPersonnes = [personne1, personne2, personne3, personne4, personne5, personne6, personne7, personne8, personne9, personne10, personne11, personne12,
     personne13, personne14, personne15, personne16, personne17, personne18, personne19, personne20, personne21, personne22, personne23, personne24]
 
-let arrayHommes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "homme")
-let arrayFemmes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "femme")
+let hommes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "homme")
+let femmes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "femme")
 
 
 function afficherPersonnes(gender) {
@@ -72,9 +72,7 @@ function afficherPersonnes(gender) {
         newProfile.appendChild(photoCartes)
         newProfile.appendChild(divNom)
         divNom.appendChild(nomCartes)
-
     }
 }
-afficherPersonnes(arrayFemmes)
 
-console.log(arrayHommes)
+afficherPersonnes(arrayPersonnes)
