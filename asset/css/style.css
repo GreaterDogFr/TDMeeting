@@ -129,42 +129,41 @@ table {
 }
 
 /* css */
-.searchContainer {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 30px;
-    justify-content: center;
-}
 
-@import url('https://fonts.googleapis.com/css2?family=Marvel&family=PT+Serif:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Marvel&family=PT+Serif:ital@1&display=swap");
 
-
-#nav{
-    background-color: #dd9b9f;
+#nav {
+  background-color: #dd9b9f;
 }
 
 .sweet {
-    font-family: 'PT Serif', serif;
-    
- 
+  font-family: "PT Serif", serif;
 }
 
-body{
-    background-color: #ffccbc !important;
-} 
-
-#container{
-    background-color: #c6c2d0;
-    border: 2px solid grey !important; 
-    height: 25rem;
+body {
+  background-color: #ffccbc !important;
 }
 
-.taille{
-    margin-top: 15rem !important;
-    background-color: #dd9b9f;
-    font-family:  'PT Serif', serif;
-    font-size: 1.3rem !important;
-    height: 5rem !important;
+#container {
+  background-color: #c6c2d0;
+  border: 2px solid grey !important;
+  height: 25rem;
+}
+
+.taille {
+  margin-top: 15rem !important;
+  background-color: #dd9b9f;
+  font-family: "PT Serif", serif;
+  font-size: 1.3rem !important;
+  height: 5rem !important;
+}
+/* search */
+
+.searchContainer {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 30px;
+  justify-content: center;
 }
 .profilepics {
   width: 100%;
@@ -178,10 +177,20 @@ body{
   flex-direction: column;
   align-items: center;
   width: 300px;
+  height: 400px;
+  overflow: hidden;
 }
 
-.nomCartes{
+.parentNomCartes{
     position: absolute;
-    bottom: 40px;
-    color: orange;
+
+}
+.nomCartes {
+    /* background-color: white; */
+  position: absolute;
+  bottom: 50px;
+  left: -145px;
+  width: 300px;
+  color: white;
+  font-size: 1.7rem;
 }

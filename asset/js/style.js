@@ -50,18 +50,21 @@ function afficherPersonnes() {
         newProfile.setAttribute("class", "profileCards")
 
         //? Afficher nom
+        const divNom = document.createElement("div")
+        divNom.setAttribute("class","parentNomCartes")
         const nomCartes = document.createElement("p")
-        nomCartes.setAttribute("class","nomCartes")
+        nomCartes.setAttribute("class", "nomCartes")
         nomCartes.innerHTML = arrayPersonnes[iteration].pseudo
         //? Afficher Photo
         const photoCartes = document.createElement("img")
-        photoCartes.setAttribute("src", arrayPersonnes[iteration].photo )
-        photoCartes.setAttribute("class","profilepics")
-        //? Afficher un bouto n
+        photoCartes.setAttribute("src", arrayPersonnes[iteration].photo)
+        photoCartes.setAttribute("class", "profilepics")
+        //? Afficher un bouton
         //?
         searchContainer.appendChild(newProfile)
         newProfile.appendChild(photoCartes)
-        newProfile.appendChild(nomCartes)
+        newProfile.appendChild(divNom)
+        divNom.appendChild(nomCartes)
     }
 }
 afficherPersonnes()
