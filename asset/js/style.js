@@ -45,21 +45,27 @@ let arrayPersonnes = [personne1, personne2, personne3, personne4, personne5, per
 function afficherPersonnes() {
     //? On veut afficher tout le monde dans cette fonction
     for (let iteration = 0; iteration < 24; iteration++) {
-        const newDiv = document.createElement("div")
-        newDiv.setAttribute("id", arrayPersonnes[iteration].id)
-        newDiv.setAttribute("class", "cartes")
+        const newProfile = document.createElement("a")
+        newProfile.setAttribute("id", arrayPersonnes[iteration].id)
+        newProfile.setAttribute("class", "profileCards")
+        newProfile.setAttribute("href", "profil.html")
 
         //? Afficher nom
+        const divNom = document.createElement("div")
+        divNom.setAttribute("class","parentNomCartes")
         const nomCartes = document.createElement("p")
+        nomCartes.setAttribute("class", "nomCartes")
         nomCartes.innerHTML = arrayPersonnes[iteration].pseudo
         //? Afficher Photo
         const photoCartes = document.createElement("img")
-        photoCartes.setAttribute("src", arrayPersonnes[iteration].photo )
-        photoCartes.setAttribute("class","profilepics")
+        photoCartes.setAttribute("src", arrayPersonnes[iteration].photo)
+        photoCartes.setAttribute("class", "profilepics")
+        //? Afficher un bouton
         //?
-        searchContainer.appendChild(newDiv)
-        newDiv.appendChild(nomCartes)
-        newDiv.appendChild(photoCartes)
+        searchContainer.appendChild(newProfile)
+        newProfile.appendChild(photoCartes)
+        newProfile.appendChild(divNom)
+        divNom.appendChild(nomCartes)
     }
 }
 afficherPersonnes()
