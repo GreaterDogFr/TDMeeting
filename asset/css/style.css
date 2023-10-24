@@ -189,3 +189,9 @@ body {
   bottom: -19px;
   background-color: rgba(2, 4, 23, 0.6);
 }
+
+.card{
+  position: relative; 
+  left :25%;
+  top: 25%
+}
