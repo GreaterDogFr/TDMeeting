@@ -81,17 +81,19 @@
 
         let truc = new URLSearchParams(window.location.search)
         let index = truc.get('index')
-        console.log(arrayPersonnes[index])
+        let bidule = parseInt(index)
+        let trueIndex = bidule -1
+        console.log(trueIndex)
 
             container.innerHTML += `
         <div class="card w-50 shadow-lg p-3 mb-5 bg-body-tertiary rounded justify-content-center ">
         <div>
-<h2 class="sweet">nom : ${arrayPersonnes[index].pseudo}</h2>
+<h2 class="sweet">nom : ${arrayPersonnes[trueIndex].pseudo}</h2>
 
 
 </div>
 <div class="mt-5 text-center">
-                <img class="w-50" src="${arrayPersonnes[index].photo}" alt="photo profil">
+                <img class="w-50" src="${arrayPersonnes[trueIndex].photo}" alt="photo profil">
             </div>
 
             <div class="mt-3 border ">
