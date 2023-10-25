@@ -1,7 +1,31 @@
 //Todo :cookie de l'entrée dans le site
+let filters = document.querySelectorAll(".dropdown-item")
+filters.forEach(element => {
+    element.addEventListener('click', function (e) {
+        searchContainer.innerHTML = ""
+        filters.value = e.target.innerText
+        console.log(filters.value)
+
+        let hommes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "homme")
+        let femmes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "femme")
+
+        switch (filters.value) {
+            case "Homme":
+                afficherPersonnes(hommes)
+                break;
+            case "Femme":
+                afficherPersonnes(femmes)
+                break;
+            case "Tous":
+                afficherPersonnes(arrayPersonnes)
+                break;
+            default:
+                afficherPersonnes(arrayPersonnes)
+        }
+    })
+});
 
 let searchContainer = document.getElementById("searchContainer")
-let filter = document.getElementById("filters")
 class personnage {
 
     constructor(id, pseudo, photo, age, sexe, recherche, departement, description) {
@@ -26,7 +50,7 @@ let personne6 = new personnage('6', 'Jay Rane', 'asset/img/JayRane.jpg', '30', '
 let personne7 = new personnage('7', 'Tender', 'asset/img/tender.jpg', '38', 'homme', 'homme', '75', ' en temps voulut')
 let personne8 = new personnage('8', 'Spencer Selover', 'asset/img/spencerSelover.jpg', '30', 'homme', 'femme', '75', ' en temps voulut')
 let personne9 = new personnage('9', 'Lou', 'asset/img/lou.jpg', '37', 'femme', 'homme', '75', ' en temps voulut')
-let personne10 = new personnage( '10', 'Celine', 'asset/img/celine.jpg', '32', 'femme', 'homme', '75', ' en temps voulut')
+let personne10 = new personnage('10', 'Celine', 'asset/img/celine.jpg', '32', 'femme', 'homme', '75', ' en temps voulut')
 let personne11 = new personnage('11', 'Sara', 'asset/img/sara.jpg', '24', 'femme', 'homme', '75', ' en temps voulut')
 let personne12 = new personnage('12', 'Luna', 'asset/img/Luna.jpg', '20', 'femme', 'homme', '75', ' en temps voulut')
 let personne13 = new personnage('13', 'marion', 'asset/img/adeleGomes.jpg', '30', 'femme', 'femme', '78', 'en temps voulut')
@@ -44,10 +68,6 @@ let personne24 = new personnage('24', 'Mimi', 'asset/img/marliesRiedl.jpg', '26'
 
 let arrayPersonnes = [personne1, personne2, personne3, personne4, personne5, personne6, personne7, personne8, personne9, personne10, personne11, personne12,
     personne13, personne14, personne15, personne16, personne17, personne18, personne19, personne20, personne21, personne22, personne23, personne24]
-
-let hommes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "homme")
-let femmes = arrayPersonnes.filter((arrayPersonnes) => arrayPersonnes.sexe == "femme")
-
 
 function afficherPersonnes(gender) {
     //? On veut afficher tout le monde dans cette fonction
